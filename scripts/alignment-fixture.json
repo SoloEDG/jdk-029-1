@@ -1,0 +1,120 @@
+{
+  "reference": {
+    "bpm": 120.0,
+    "sections": [
+      {
+        "name": "intro",
+        "start": 0.0,
+        "end": 8.0,
+        "melody": null
+      },
+      {
+        "name": "verse1",
+        "start": 8.0,
+        "end": 16.0,
+        "melody": "verseA"
+      },
+      {
+        "name": "verse2",
+        "start": 16.0,
+        "end": 24.0,
+        "melody": "verseB"
+      },
+      {
+        "name": "chorus1",
+        "start": 24.0,
+        "end": 32.0,
+        "melody": "chorus"
+      },
+      {
+        "name": "bridge",
+        "start": 32.0,
+        "end": 40.0,
+        "melody": "bridge"
+      },
+      {
+        "name": "chorus2",
+        "start": 40.0,
+        "end": 48.0,
+        "melody": "chorus"
+      },
+      {
+        "name": "outro",
+        "start": 48.0,
+        "end": 52.0,
+        "melody": "outro"
+      }
+    ],
+    "duration": 52.0
+  },
+  "target": {
+    "bpm": 112.0,
+    "sections": [
+      {
+        "name": "pickup",
+        "start": 0.0,
+        "end": 2.142857,
+        "melody": null
+      },
+      {
+        "name": "intro",
+        "start": 2.142857,
+        "end": 10.714286,
+        "melody": null
+      },
+      {
+        "name": "verse1",
+        "start": 10.714286,
+        "end": 19.285714,
+        "melody": "verseA"
+      },
+      {
+        "name": "verse2",
+        "start": 19.285714,
+        "end": 27.857143,
+        "melody": "verseB"
+      },
+      {
+        "name": "chorus1",
+        "start": 27.857143,
+        "end": 36.428571,
+        "melody": "chorus"
+      },
+      {
+        "name": "chorus1_repeat",
+        "start": 36.428571,
+        "end": 45.0,
+        "melody": "chorus"
+      },
+      {
+        "name": "chorus2",
+        "start": 45.0,
+        "end": 53.571429,
+        "melody": "chorus"
+      },
+      {
+        "name": "outro",
+        "start": 53.571429,
+        "end": 57.857143,
+        "melody": "outro"
+      }
+    ],
+    "duration": 57.857143
+  },
+  "deletedLineIds": [
+    "line-13",
+    "line-14",
+    "line-15",
+    "line-16"
+  ],
+  "repeatedLineIds": [
+    "line-9",
+    "line-10",
+    "line-11",
+    "line-12",
+    "line-17",
+    "line-18",
+    "line-19",
+    "line-20"
+  ]
+}

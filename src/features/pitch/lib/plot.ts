@@ -9,6 +9,8 @@ interface Plot {
   range: TimeRange
   notes: GuideNote[]
   traces: Trace[]
+  /** Hatch the range when the lyric has no reliable target mapping. */
+  unreliable?: boolean
 }
 
 export function drawPitch(canvas: HTMLCanvasElement, width: number, height: number, plot: Plot) {
@@ -57,6 +59,24 @@ export function drawPitch(canvas: HTMLCanvasElement, width: number, height: numb
     context.fillStyle = '#a5ac96'
     context.textAlign = index === 0 ? 'left' : index === ticks ? 'right' : 'center'
     context.fillText(clockLabel(time, duration < 6), px, height - 10)
+  }
+
+  if (plot.unreliable) {
+    context.save()
+    context.beginPath()
+    context.rect(left, top, right - left, bottom - top)
+    context.clip()
+    context.fillStyle = 'rgba(240, 153, 130, 0.07)'
+    context.fillRect(left, top, right - left, bottom - top)
+    context.strokeStyle = 'rgba(240, 153, 130, 0.28)'
+    context.lineWidth = 1
+    for (let offset = -height; offset < width + height; offset += 8) {
+      context.beginPath()
+      context.moveTo(left + offset, bottom)
+      context.lineTo(left + offset + height, top)
+      context.stroke()
+    }
+    context.restore()
   }
 
   context.save()
